@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file describe the sensorclient
+
+-->
+<sensorclient
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="http://samples.beasys.com/example.xsd">
+  <name>Using JMS Queue</name>
+  <description>Demonstrates BAM sensor using JMS queue.</description>
+  <date>2011-11-06-08:00</date>
+  <author>Ourent</author>
+  <version>1.0</version>
+  <package>sensorclient</package>
+  <zip>sensorclient</zip>
+  <wlsCompatibility>10.3</wlsCompatibility>
+  <parentCategory>API</parentCategory>
+  <childCategory>Messaging (JMS)</childCategory>
+  <subCategory/>
+  <wlsConfiguration/>
+  <coconutTests>
+    <buildTest>
+    <test name="build-jms/queue">
+      <ant-task>
+        <ant dir="${examples.src.dir}/examples/jms/queue"/>
+        <sleep seconds="5"/>
+      </ant-task>
+    </test>
+    </buildTest>
+    <executeTest>
+      <test name="run-jms/queue/QueueSend" requiresSuccess="build-jms/queue">
+      <test-parameter name="cmdline" value="java sensorclient.QueueSend t3://localhost:7001"/>
+      <test-parameter name="input1" value="Go Noles!"/>
+      <test-parameter name="input2" value="quit"/>
+      <javatest testclass="@CMDLINE_INTERACTIVE_EXAMPLE_TEST@"/>
+    </test>
+    </executeTest>
+  </coconutTests>
+  <build>
+    <deployable>true</deployable>
+  </build>
+  <execution>
+    <class>
+      <name>sensorclient.QueueSend</name>
+      <parameter>t3://10.134.0.111:7001</parameter>
+    </class>
+  </execution>
+  <execution>
+    <class>
+      <name>sensorclient.QueueReceive</name>
+      <parameter>t3://10.134.0.111:7001</parameter>
+    </class>
+  </execution>
+
+</sensorclient>

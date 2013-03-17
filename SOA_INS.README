@@ -1,0 +1,13 @@
+Install Oracle SOA Suite
+	Directory Details
+		Middleware Home Location: /opt/oracle/Middleware
+		Oracle Home Location: /opt/oracle/Middleware/Oracle_SOA1
+		Application Server Type: WebLogic Server
+		Application Server Location: /opt/oracle/Middleware
+	Disk Space
+		Oracle Home Size: 1644 MB
+		Available: 861824 MB
+	Applications
+		Oracle BPEL PM, Mediator, Rules, B2B, Human Workflow
+		Oracle Business Activity Monitoring (BAM)
+		Oracle Enterprise Manager

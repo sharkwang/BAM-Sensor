@@ -1,0 +1,127 @@
+*****************************************************
+** Setting up SOA specific environment...
+*****************************************************
+EXTRA_JAVA_PROPERTIES= -da:org.apache.xmlbeans...
+.
+LD_LIBRARY_PATH=/opt/oracle/Middleware/patch_wls1036/profiles/default/native:/opt/oracle/Middleware/patch_ocp371/profiles/default/native:/opt/oracle/Middleware/wlserver_10.3/server/native/linux/x86_64:/opt/oracle/Middleware/wlserver_10.3/server/native/linux/x86_64/oci920_8
+.
+USER_MEM_ARGS=-Xms768m -Xmx1536m
+.
+*****************************************************
+** End SOA specific environment setup
+*****************************************************
+.
+.
+JAVA Memory arguments: -Xms768m -Xmx1536m
+.
+WLS Start Mode=Development
+.
+CLASSPATH=/opt/oracle/Middleware/oracle_common/modules/oracle.jdbc_11.1.1/ojdbc6dms.jar:/opt/oracle/Middleware/patch_wls1036/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/opt/oracle/Middleware/patch_ocp371/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/opt/jrockit-jdk1.6.0_37-R28.2.5-4.1.0/lib/tools.jar:/opt/oracle/Middleware/wlserver_10.3/server/lib/weblogic_sp.jar:/opt/oracle/Middleware/wlserver_10.3/server/lib/weblogic.jar:/opt/oracle/Middleware/modules/features/weblogic.server.modules_10.3.6.0.jar:/opt/oracle/Middleware/wlserver_10.3/server/lib/webservices.jar:/opt/oracle/Middleware/modules/org.apache.ant_1.7.1/lib/ant-all.jar:/opt/oracle/Middleware/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar:/opt/oracle/Middleware/Oracle_SOA1/communications/modules/usermessaging-config_11.1.1.jar:/opt/oracle/Middleware/oracle_common/modules/oracle.jrf_11.1.1/jrf.jar:/opt/oracle/Middleware/wlserver_10.3/common/derby/lib/derbyclient.jar:/opt/oracle/Middleware/wlserver_10.3/server/lib/xqrl.jar
+.
+PATH=/opt/oracle/Middleware/wlserver_10.3/server/bin:/opt/oracle/Middleware/modules/org.apache.ant_1.7.1/bin:/opt/jrockit-jdk1.6.0_37-R28.2.5-4.1.0/jre/bin:/opt/jrockit-jdk1.6.0_37-R28.2.5-4.1.0/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/home/oracle/bin:/opt/app/oracle/product/11.2.0/dbhome_1/bin
+.
+***************************************************
+*  To start WebLogic Server, use a username and   *
+*  password assigned to an admin-level user.  For *
+*  server administration, use the WebLogic Server *
+*  console at http://hostname:port/console        *
+***************************************************
+starting weblogic with Java version:
+java version "1.6.0_37"
+Java(TM) SE Runtime Environment (build 1.6.0_37-b06)
+Oracle JRockit(R) (build R28.2.5-20-152429-1.6.0_37-20120927-1915-linux-x86_64, compiled mode)
+Starting WLS with line:
+/opt/jrockit-jdk1.6.0_37-R28.2.5-4.1.0/bin/java -jrockit   -Xms768m -Xmx1536m -Dweblogic.Name=AdminServer -Djava.security.policy=/opt/oracle/Middleware/wlserver_10.3/server/lib/weblogic.policy  -Xverify:none  -da -Dplatform.home=/opt/oracle/Middleware/wlserver_10.3 -Dwls.home=/opt/oracle/Middleware/wlserver_10.3/server -Dweblogic.home=/opt/oracle/Middleware/wlserver_10.3/server  -Dcommon.components.home=/opt/oracle/Middleware/oracle_common -Djrf.version=11.1.1 -Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Jdk14Logger -Ddomain.home=/opt/oracle/Middleware/user_projects/domains/bam_domain -Djrockit.optfile=/opt/oracle/Middleware/oracle_common/modules/oracle.jrf_11.1.1/jrocket_optfile.txt -Doracle.server.config.dir=/opt/oracle/Middleware/user_projects/domains/bam_domain/config/fmwconfig/servers/AdminServer -Doracle.domain.config.dir=/opt/oracle/Middleware/user_projects/domains/bam_domain/config/fmwconfig  -Digf.arisidbeans.carmlloc=/opt/oracle/Middleware/user_projects/domains/bam_domain/config/fmwconfig/carml  -Digf.arisidstack.home=/opt/oracle/Middleware/user_projects/domains/bam_domain/config/fmwconfig/arisidprovider -Doracle.security.jps.config=/opt/oracle/Middleware/user_projects/domains/bam_domain/config/fmwconfig/jps-config.xml -Doracle.deployed.app.dir=/opt/oracle/Middleware/user_projects/domains/bam_domain/servers/AdminServer/tmp/_WL_user -Doracle.deployed.app.ext=/- -Dweblogic.alternateTypesDirectory=/opt/oracle/Middleware/oracle_common/modules/oracle.ossoiap_11.1.1,/opt/oracle/Middleware/oracle_common/modules/oracle.oamprovider_11.1.1 -Djava.protocol.handler.pkgs=oracle.mds.net.protocol  -Dweblogic.jdbc.remoteEnabled=false -Doracle.security.jps.policy.migration.validate.principal=false  -da:org.apache.xmlbeans... -Dbam.oracle.home=/opt/oracle/Middleware/Oracle_SOA1 -Dums.oracle.home=/opt/oracle/Middleware/Oracle_SOA1 -Dweblogic.management.discover=true  -Dwlw.iterativeDev= -Dwlw.testConsole= -Dwlw.logErrorsToConsole= -Dweblogic.ext.dirs=/opt/oracle/Middleware/patch_wls1036/profiles/default/sysext_manifest_classpath:/opt/oracle/Middleware/patch_ocp371/profiles/default/sysext_manifest_classpath  weblogic.Server
+[WARN ] Use of -Djrockit.optfile is deprecated and discouraged.
+<2013-3-16 下午07时53分16秒 CST> <Info> <Security> <BEA-090905> <Disabling CryptoJ JCE Provider self-integrity check for better startup performance. To enable this check, specify -Dweblogic.security.allowCryptoJDefaultJCEVerification=true> 
+<2013-3-16 下午07时53分17秒 CST> <Info> <Security> <BEA-090906> <Changing the default Random Number Generator in RSA CryptoJ from ECDRBG to FIPS186PRNG. To disable this change, specify -Dweblogic.security.allowCryptoJDefaultPRNG=true> 
+<2013-3-16 下午07时53分17秒 CST> <Info> <WebLogicServer> <BEA-000377> <Starting WebLogic Server with Oracle JRockit(R) Version R28.2.5-20-152429-1.6.0_37-20120927-1915-linux-x86_64 from Oracle Corporation> 
+<2013-3-16 下午07时53分18秒 CST> <Info> <Management> <BEA-141107> <Version: WebLogic Server 10.3.6.0  Tue Nov 15 08:52:36 PST 2011 1441050 > 
+<2013-3-16 下午07时53分22秒 CST> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to STARTING> 
+<2013-3-16 下午07时53分22秒 CST> <Info> <WorkManager> <BEA-002900> <Initializing self-tuning thread pool> 
+<2013-3-16 下午07时53分24秒 CST> <Notice> <LoggingService> <BEA-320400> <The log file /opt/oracle/Middleware/user_projects/domains/bam_domain/servers/AdminServer/logs/AdminServer.log will be rotated. Reopen the log file if tailing has stopped. This can happen on some platforms like Windows.> 
+<2013-3-16 下午07时53分24秒 CST> <Notice> <LoggingService> <BEA-320401> <The log file has been rotated to /opt/oracle/Middleware/user_projects/domains/bam_domain/servers/AdminServer/logs/AdminServer.log00001. Log messages will continue to be logged in /opt/oracle/Middleware/user_projects/domains/bam_domain/servers/AdminServer/logs/AdminServer.log.> 
+<2013-3-16 下午07时53分24秒 CST> <Notice> <Log Management> <BEA-170019> <The server log file /opt/oracle/Middleware/user_projects/domains/bam_domain/servers/AdminServer/logs/AdminServer.log is opened. All server side log events will be written to this file.> 
+<2013-3-16 下午07时53分42秒 CST> <Notice> <Security> <BEA-090082> <Security initializing using security realm myrealm.> 
+<2013-3-16 下午07时53分45秒 CST> <Notice> <LoggingService> <BEA-320400> <The log file /opt/oracle/Middleware/user_projects/domains/bam_domain/servers/AdminServer/logs/access.log will be rotated. Reopen the log file if tailing has stopped. This can happen on some platforms like Windows.> 
+<2013-3-16 下午07时53分45秒 CST> <Notice> <LoggingService> <BEA-320401> <The log file has been rotated to /opt/oracle/Middleware/user_projects/domains/bam_domain/servers/AdminServer/logs/access.log00001. Log messages will continue to be logged in /opt/oracle/Middleware/user_projects/domains/bam_domain/servers/AdminServer/logs/access.log.> 
+2013-3-16 19:53:48 oracle.ods.virtualization.engine.util.VDELogger info
+信息: Notification sent for Mapping config object reloaded
+2013-3-16 19:53:49 oracle.ods.virtualization.engine.util.VDELogger info
+信息: ConfigObjectReloaded for ServerConfig. PreviousVersion : -1 : CurrentVersion : 0
+2013-3-16 19:53:49 oracle.ods.virtualization.engine.util.VDELogger info
+信息: Notification event sent for activating changes.
+2013-3-16 19:53:49 oracle.ods.virtualization.engine.util.VDELogger info
+信息: AdaptersConfig MBean reloaded
+2013-3-16 19:53:49 oracle.ods.virtualization.engine.util.VDELogger info
+信息: Notification sent for AdaptersConfig MBean reloaded
+2013-3-16 19:53:49 oracle.ods.virtualization.engine.util.VDELogger info
+信息: ConfigObjectReloaded for ServerConfig. PreviousVersion : -1 : CurrentVersion : 0
+2013-3-16 19:53:49 oracle.ods.virtualization.engine.util.VDELogger info
+信息: Notification event sent for activating changes.
+2013-3-16 19:53:49 oracle.ods.virtualization.engine.util.VDELogger info
+信息: Notification sent for Mapping config object reloaded
+2013-3-16 19:53:49 oracle.ods.virtualization.engine.util.VDELogger info
+信息: AdaptersConfig MBean reloaded
+2013-3-16 19:53:49 oracle.ods.virtualization.engine.util.VDELogger info
+信息: Notification sent for AdaptersConfig MBean reloaded
+<2013-3-16 下午07时53分52秒 CST> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to STANDBY> 
+<2013-3-16 下午07时53分52秒 CST> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to STARTING> 
+<2013-3-16 下午07时54分04秒 CST> <Warning> <J2EE> <BEA-160140> <Unresolved optional package references (in META-INF/MANIFEST.MF): [Extension-Name: oracle.applcore.model, Specification-Version: 0.1, Implementation-Version: 11.1.1.0.0, referenced from: /opt/oracle/Middleware/user_projects/domains/bam_domain/servers/AdminServer/tmp/_WL_user/usermessagingserver/a7bt7z]. Make sure the referenced optional package has been deployed as a library.> 
+<2013-3-16 下午07时54分05秒 CST> <Warning> <EJB> <BEA-015036> <In the EJB MessageReceiverBean(Application: usermessagingserver, EJBComponent: sdpmessagingengine.jar), the value for the activation config property 'connectionFactoryJNDIName' will be ignored since it is overridden with the value 'OraSDPM/QueueConnectionFactory';> 
+<2013-3-16 下午07时54分07秒 CST> <Warning> <EJB> <BEA-015036> <In the EJB MessageDispatcherBean(Application: usermessagingserver, EJBComponent: sdpmessagingclient-ejb-parlayx.jar), the value for the activation config property 'connectionFactoryJNDIName' will be ignored since it is overridden with the value 'OraSDPM/QueueConnectionFactory';> 
+<2013-3-16 下午07时54分10秒 CST> <Warning> <Connector> <BEA-190110> <Resource Adapter is calling BootstrapContext.createTimer() and allocating a Timer Thread that is not managed by WebLogic Server. This may adversely impact the performance/operation of WebLogic Server.> 
+<2013-3-16 下午07时54分10秒 CST> <Warning> <EJB> <BEA-015036> <In the EJB DriverDispatcherBean(Application: usermessagingdriver-email, EJBComponent: sdpmessagingdriver-dispatcher-ejb.jar), the value for the activation config property 'connectionFactoryJNDIName' will be ignored since it is overridden with the value 'OraSDPM/QueueConnectionFactory';> 
+<2013-3-16 下午07时54分21秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "portal:portal_page_engine_response_codes_delta" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分21秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "portal:portal_page_engine_response_codes" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分21秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "portal:portal_page_engine" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "analytics:Response" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "reports:Reports_Server_Information" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "reports:Reports_Server_Performance" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "reports:Reports_Server_Response" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "reports:Reports_Servlet_Response" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "reports:Remote_Bridge_Elements" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "activitygraph:Response" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "personalization:Response" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "domain_oracle_oim:jdbc" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "weblogic_j2eeserver:jvm_runtime" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "weblogic_j2eeserver:jvm_compilation_time" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "weblogic_j2eeserver:jvm_memory_usage" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "weblogic_j2eeserver:jvm_class_loading" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "weblogic_j2eeserver:jvm_threads" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "domain_oracle_oaam:OAAM_Datasource" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "oracle_forms:aggr_FormsResourceUsage" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "oracle_forms:NumberOfSessions" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "oracle_forms:JVMResourceUsage" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "oracle_forms:servlet_rollup_agg" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "oracle_soainfra:total_faults" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "webcache:request_filter_denied_stats" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "portaltools:Response" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "oracle_federation:protocol_profiles_rollup" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "oracle_federation:protocol_profiles_events_rollup" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分22秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "oracle_federation:protocol_profiles_protocol_phase_events_rollup" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分23秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "oracle_oim:overall" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分23秒 CST> <Warning> <oracle.dms.collector> <BEA-000000> <度量表 "discussion:Response" 没有关键字列。将不对其进行收集。> 
+<2013-3-16 下午07时54分25秒 CST> <Warning> <oracle.sdp.messaging.driver.base> <SDP-26024> <驱动程序 Email-Driver 的注册未完成; 将定期重试, 直至消息服务器响应。> 
+<2013-3-16 下午07时54分42秒 CST> <Notice> <LoggingService> <BEA-320400> <The log file /opt/oracle/Middleware/user_projects/domains/bam_domain/servers/AdminServer/logs/bam_domain.log will be rotated. Reopen the log file if tailing has stopped. This can happen on some platforms like Windows.> 
+<2013-3-16 下午07时54分42秒 CST> <Notice> <LoggingService> <BEA-320401> <The log file has been rotated to /opt/oracle/Middleware/user_projects/domains/bam_domain/servers/AdminServer/logs/bam_domain.log00001. Log messages will continue to be logged in /opt/oracle/Middleware/user_projects/domains/bam_domain/servers/AdminServer/logs/bam_domain.log.> 
+<2013-3-16 下午07时54分42秒 CST> <Notice> <Log Management> <BEA-170027> <The Server has established connection with the Domain level Diagnostic Service successfully.> 
+<2013-3-16 下午07时54分43秒 CST> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to ADMIN> 
+<2013-3-16 下午07时54分43秒 CST> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to RESUMING> 
+<2013-3-16 下午07时54分43秒 CST> <Notice> <Server> <BEA-002613> <Channel "Default[2]" is now listening on 127.0.0.1:7001 for protocols iiop, t3, ldap, snmp, http.> 
+<2013-3-16 下午07时54分43秒 CST> <Notice> <Server> <BEA-002613> <Channel "Default[3]" is now listening on 0:0:0:0:0:0:0:1:7001 for protocols iiop, t3, ldap, snmp, http.> 
+<2013-3-16 下午07时54分43秒 CST> <Notice> <Server> <BEA-002613> <Channel "Default" is now listening on 125.65.45.180:7001 for protocols iiop, t3, ldap, snmp, http.> 
+<2013-3-16 下午07时54分43秒 CST> <Notice> <Server> <BEA-002613> <Channel "Default[1]" is now listening on fe80:0:0:0:2e0:81ff:fed2:b855:7001 for protocols iiop, t3, ldap, snmp, http.> 
+<2013-3-16 下午07时54分43秒 CST> <Notice> <WebLogicServer> <BEA-000331> <Started WebLogic Admin Server "AdminServer" for domain "bam_domain" running in Development Mode> 
+<2013-3-16 下午07时54分43秒 CST> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to RUNNING> 
+<2013-3-16 下午07时54分43秒 CST> <Notice> <WebLogicServer> <BEA-000360> <Server started in RUNNING mode> 
+<2013-3-16 下午07时55分34秒 CST> <Error> <org.apache.beehive.netui.pageflow.internal.AdapterManager> <BEA-000000> <ServletContainerAdapter manager not initialized correctly.> 
+<2013-3-16 下午07时57分07秒 CST> <Warning> <netuix> <BEA-423420> <Redirect is executed in begin or refresh action. Redirect url is /console/console.portal?_nfpb=true&_pageLabel=JdbcDatasourcesJDBCDataSourceMonitorTestingPage.> 
+<2013-3-16 下午08时31分30秒 CST> <Warning> <netuix> <BEA-423420> <Redirect is executed in begin or refresh action. Redirect url is /console/console.portal?_nfpb=true&_pageLabel=JdbcDatasourcesJDBCDataSourceConfigTabPage&JdbcDatasourcesJDBCDataSourceConfigPortlethandle=com.bea.console.handles.JMXHandle%28%22com.bea%3AName%3DBAMDataSource%2CType%3Dweblogic.j2ee.descriptor.wl.JDBCDataSourceBean%2CParent%3D%5Bbam_domain%5D%2FJDBCSystemResources%5BBAMDataSource%5D%2CPath%3DJDBCResource%5BBAMDataSource%5D%22%29.> 
+编译器警告：
+  line 424: 属性“bgcolor”在元素外。
+  line 424: 属性“bgcolor”在元素外。
+<2013-3-16 下午09时51分07秒 CST> <Warning> <oracle.bam.web.reportserver.activedata.ActiveDataServlet> <BEA-000000> <inside ActiveDataServlet.doResponse(): weblogic.servlet.http.RequestResponseKey@5a4a2640> 
+<2013-3-16 下午10时05分50秒 CST> <Warning> <oracle.bam.web.reportserver.activedata.ActiveDataServlet> <BEA-000000> <inside ActiveDataServlet.doResponse(): weblogic.servlet.http.RequestResponseKey@7584042d> 
+<2013-3-16 下午10时07分53秒 CST> <Notice> <Security> <BEA-090078> <User oracle in security realm myrealm has had 5 invalid login attempts, locking account for 30 minutes.> 
+<2013-3-16 下午10时07分53秒 CST> <Notice> <Security> <BEA-090078> <User oracle in security realm myrealm has had 5 invalid login attempts, locking account for 30 minutes.> 

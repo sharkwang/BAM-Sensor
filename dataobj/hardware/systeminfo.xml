@@ -1,0 +1,31 @@
+<SystemInfoSensor>
+  <startdate>2013-03-18</startdate>
+  <starttime>22:33:25</starttime>
+  <App>bankapp</App>
+  <MultiApp>testapp</MultiApp>
+  <Type>AS</Type>
+  <ActiveDisk>/opt</ActiveDisk>
+  <hostname>testland.orient.com</hostname>
+  <OSname>Red Hat Enterprise Linux 5</OSname>
+  <CpuType>IntelXeon</CpuType>
+  <CpuMhz>2133</CpuMhz>
+  <CpuTotalCores>8</CpuTotalCores>
+  <CpuTotalIdlePercent>99.1%</CpuTotalIdlePercent>
+  <usedMem>10.35G</usedMem>
+  <MemPercent>32.89</MemPercent>
+  <ActiveDiskUsage>2.00</ActiveDiskUsage>
+  <ActiveDiskFree>887.75</ActiveDiskFree>
+  <ActiveDiskRead>40504</ActiveDiskRead>
+  <ActiveDiskWrite>368609</ActiveDiskWrite>
+  <IPaddress>125.65.45.180</IPaddress>
+  <MacAddress>00:E0:81:D2:B8:55</MacAddress>
+  <NetRxBytes>124964769</NetRxBytes>
+  <NetTxBytes>361343632</NetTxBytes>
+  <NetRxErrors>0</NetRxErrors>
+  <NetTxErrors>0</NetTxErrors>
+  <NetRxBytes__2>0</NetRxBytes__2>
+  <NetTxBytes__2>0</NetTxBytes__2>
+  <NetRxErrors__2>0</NetRxErrors__2>
+  <NetTxErrors__2>0</NetTxErrors__2>
+</SystemInfoSensor>
+

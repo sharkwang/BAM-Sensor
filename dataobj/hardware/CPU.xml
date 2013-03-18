@@ -1,0 +1,34 @@
+<CpuData>
+  <info>
+    <vendor>Intel</vendor>
+    <model>Xeon</model>
+    <mhz>2133</mhz>
+    <cacheSize>4096</cacheSize>
+    <totalCores>8</totalCores>
+    <totalSockets>8</totalSockets>
+    <coresPerSocket>16</coresPerSocket>
+  </info>
+  <perc>
+    <user>0.03323262839879154</user>
+    <sys>0.030211480362537766</sys>
+    <nice>0.0</nice>
+    <idle>0.9365558912386707</idle>
+    <wait>0.0</wait>
+    <irq>0.0</irq>
+    <softIrq>0.0</softIrq>
+    <stolen>0.0</stolen>
+    <combined>0.0634441087613293</combined>
+  </perc>
+  <timer>
+    <user>1470730</user>
+    <sys>1024040</sys>
+    <nice>2578400</nice>
+    <idle>727587880</idle>
+    <wait>1465340</wait>
+    <irq>130</irq>
+    <softIrq>5510</softIrq>
+    <stolen>0</stolen>
+    <total>734132030</total>
+  </timer>
+</CpuData>
+
